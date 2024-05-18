@@ -12,7 +12,8 @@ class Server {
     }
 
     listen(){
-        this.app.listen(8086, ()=>{
+        const port = process.env.PORT || 3000;
+        this.app.listen(port,"0.0.0.0", ()=>{
             console.log('servidor corriendo en el puerto 8086');
         })
     }
